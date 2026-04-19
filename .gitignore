@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+node_modules/
+.vscode/
+
+# Ignore model weights
+*.pt
+
+# Ignore sensitive credentials
+serviceAccount.json
