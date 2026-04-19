@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Camera Manager | Smart Temple</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="glass-bg"></div>
+    
+    <main class="manager-container">
+        <header>
+            <h1>Camera Control Center</h1>
+            <p class="subtitle">Real-time AI Source Management</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Temple Counter Section -->
+            <section class="card glass">
+                <div class="card-header">
+                    <h2>TEMPLE COUNTER AI</h2>
+                    <span class="badge">Live Sync</span>
+                </div>
+                
+                <div id="counter-list" class="source-list">
+                    <!-- Dynamic Counter Items -->
+                </div>
+
+                <div class="add-sector">
+                    <h3>Add New Source</h3>
+                    <div class="input-group">
+                        <input type="text" id="counter-input" placeholder="Camera Index (e.g. 0) or RTSP URL">
+                        <button onclick="addSource('counter')" class="btn-add">+</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Temple Parking Section -->
+            <section class="card glass">
+                <div class="card-header">
+                    <h2>TEMPLE PARKING AI</h2>
+                    <span class="badge">Live Sync</span>
+                </div>
+                
+                <div id="parking-list" class="source-list">
+                    <!-- Dynamic Parking Items -->
+                </div>
+
+                <div class="add-sector">
+                    <h3>Add New Camera</h3>
+                    <div class="input-group stacked">
+                        <input type="text" id="parking-id-input" placeholder="Camera ID (e.g. east_gate)">
+                        <input type="text" id="parking-src-input" placeholder="Source (e.g. 0)">
+                        <button onclick="addSource('parking')" class="btn-primary">Add Camera</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="status-toast" class="toast hidden">Config Saved Successfully</div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

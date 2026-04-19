@@ -1,0 +1,225 @@
+:root {
+    --bg-color: #f0f2f5;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --primary: #007aff;
+    --danger: #ff3b30;
+    --success: #34c759;
+    --text: #1c1c1e;
+    --text-muted: #8e8e93;
+    --border: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.glass-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 20% 20%, rgba(0,122,255,0.05) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(52,199,89,0.05) 0%, transparent 40%);
+    z-index: -1;
+}
+
+.manager-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--primary);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    border-radius: 30px;
+    padding: 2.5rem;
+    border: 1px solid white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.badge {
+    background: #eefdf3;
+    color: var(--success);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.source-list {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.source-item {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border);
+    transition: transform 0.2s;
+}
+
+.source-item:hover {
+    transform: translateX(5px);
+}
+
+.source-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.src-id {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.src-val {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.btn-delete {
+    background: #fff1f0;
+    color: var(--danger);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-sector {
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+}
+
+h3 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group.stacked {
+    flex-direction: column;
+}
+
+input {
+    padding: 12px 18px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    outline: none;
+    font-family: inherit;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+.btn-add {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 50px;
+    border-radius: 14px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1c1c1e;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    pointer-events: none;
+}

@@ -1,0 +1,340 @@
+{
+  "arunachala": {
+    "camera_manager_url": "http://localhost:8034",
+    "coords": [
+      12.2319,
+      79.0677
+    ],
+    "counter_url": "http://localhost:8030/stats",
+    "emergency": [
+      {
+        "name": "Police",
+        "number": "04175 222500"
+      }
+    ],
+    "facilities": [
+      "Girivalam Path",
+      "Shoe Stand",
+      "Prasadam"
+    ],
+    "image": "./images/Arunachaleswar.jpeg",
+    "location": "Tiruvannamalai, India",
+    "name": "Arunachaleswar Temple",
+    "parking_cameras": {
+      "east_gate_parking": {
+        "coords": [
+          12.231,
+          79.0695
+        ]
+      },
+      "general_lot": {
+        "coords": [
+          12.234,
+          79.065
+        ]
+      }
+    },
+    "parking_url": "http://localhost:8032",
+    "routes": [
+      {
+        "description": "Entrance through the East Gopuram.",
+        "name": "Main Tower",
+        "wait_time": "1 hour"
+      }
+    ],
+    "smart_routes": [
+      {
+        "description": "Easy access during Pournami.",
+        "duration": "10 mins",
+        "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=12.2319,79.0677",
+        "name": "Girivalam Path Start"
+      }
+    ],
+    "timings": {
+      "Darshan": "5:30 AM - 9:00 PM",
+      "Deepam": "Varies by Season"
+    }
+  },
+  "ekambareshwar": {
+    "camera_manager_url": "http://localhost:8044",
+    "coords": [
+      12.8465,
+      79.7001
+    ],
+    "counter_url": "http://localhost:8040/stats",
+    "emergency": [
+      {
+        "name": "District Hospital",
+        "number": "044 2722 2244"
+      }
+    ],
+    "facilities": [
+      "Holy Mango Tree",
+      "Ancient Halls"
+    ],
+    "image": "./images/EkambareshwarTemple.png",
+    "location": "Kanchipuram, India",
+    "name": "Ekambareshwar Temple",
+    "parking_cameras": {
+      "front_lot": {
+        "coords": [
+          12.847,
+          79.701
+        ]
+      }
+    },
+    "parking_url": "http://localhost:8042",
+    "routes": [
+      {
+        "description": "Home to the 3500-year-old Mango Tree.",
+        "name": "Main Entrance",
+        "wait_time": "20 mins"
+      }
+    ],
+    "smart_routes": [
+      {
+        "description": "Quick entry near parking lot.",
+        "duration": "5 mins",
+        "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=12.8465,79.7001",
+        "name": "South Gate Access"
+      }
+    ],
+    "timings": {
+      "Darshan": "6:00 AM - 12:30 PM, 4:00 PM - 8:30 PM"
+    }
+  },
+  "kashi": {
+    "camera_manager_url": "http://localhost:8014",
+    "coords": [
+      25.3109,
+      83.0107
+    ],
+    "counter_url": "http://localhost:8010/stats",
+    "emergency": [
+      {
+        "name": "Helpline",
+        "number": "0542 2392620"
+      }
+    ],
+    "facilities": [
+      "Locker Room",
+      "Wheelchair Support"
+    ],
+    "image": "./images/Kashi.jpg",
+    "location": "Varanasi, India",
+    "name": "Kashi Vishwanath",
+    "parking_cameras": {
+      "south_gate": {
+        "coords": [
+          25.31,
+          83.0115
+        ]
+      }
+    },
+    "parking_url": "http://localhost:8012",
+    "routes": [
+      {
+        "description": "Queue starting from the ghats.",
+        "name": "Ganga Gate",
+        "wait_time": "45 mins"
+      }
+    ],
+    "smart_routes": [
+      {
+        "description": "Scenic and zero traffic. Direct access to Lalita Ghat.",
+        "duration": "20 mins",
+        "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=25.3109,83.0107",
+        "name": "River Approach (Boat)"
+      }
+    ],
+    "timings": {
+      "Darshan": "3:00 AM - 11:00 PM",
+      "Mangala Aarti": "3:00 AM - 4:00 AM"
+    }
+  },
+  "mahakal": {
+    "camera_manager_url": "http://localhost:8004",
+    "coords": [
+      23.1827,
+      75.7682
+    ],
+    "counter_url": "http://localhost:8000/stats",
+    "emergency": [
+      {
+        "name": "Medical",
+        "number": "108"
+      },
+      {
+        "name": "Police",
+        "number": "100"
+      }
+    ],
+    "facilities": [
+      "Shoe Stall",
+      "Drinking Water",
+      "Restrooms"
+    ],
+    "image": "./images/Mahakaal.png",
+    "location": "Ujjain, India",
+    "name": "Mahakaal Temple",
+    "parking_cameras": {
+      "north_gate": {
+        "coords": [
+          23.1835,
+          75.7685
+        ]
+      },
+      "south_gate": {
+        "coords": [
+          23.182,
+          75.7675
+        ]
+      }
+    },
+    "parking_url": "http://localhost:8002",
+    "routes": [
+      {
+        "description": "Free entry for all devotees.",
+        "name": "General Lane",
+        "wait_time": "30 mins"
+      },
+      {
+        "description": "Paid entry for faster access.",
+        "name": "VIP Lane",
+        "wait_time": "10 mins"
+      }
+    ],
+    "smart_routes": [
+      {
+        "description": "Best for festivals. Avoids main market congestion.",
+        "duration": "15 mins",
+        "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=23.1827,75.7682&travelmode=walking",
+        "name": "Corridor Route (Traffic Free)"
+      }
+    ],
+    "timings": {
+      "Bhasma Aarti": "4:00 AM - 6:00 AM",
+      "Darshan": "4:00 AM - 11:00 PM"
+    }
+  },
+  "somnath": {
+    "timings": {
+      "Morning Aarti": "5 am to 6 am"
+    }
+  },
+  "tirupati": {
+    "camera_manager_url": "http://localhost:8024",
+    "coords": [
+      13.6833,
+      79.3472
+    ],
+    "counter_url": "http://localhost:8020/stats",
+    "emergency": [
+      {
+        "name": "Toll Free",
+        "number": "1800 425 4141"
+      }
+    ],
+    "facilities": [
+      "Annaprasadam",
+      "Free Bus",
+      "Cottages"
+    ],
+    "image": "./images/Tirumala.jpeg",
+    "location": "Tirupati, India",
+    "name": "Tirumala Tirupati",
+    "parking_cameras": {
+      "alipiri_parking": {
+        "coords": [
+          13.6617,
+          79.3522
+        ]
+      },
+      "multi_level_parking": {
+        "coords": [
+          13.6804,
+          79.3445
+        ]
+      },
+      "rambagicha_parking": {
+        "coords": [
+          13.676,
+          79.351
+        ]
+      }
+    },
+    "parking_url": "http://localhost:8022",
+    "routes": [
+      {
+        "description": "Free tokens required.",
+        "name": "Sarvadarsanam",
+        "wait_time": "12 hours"
+      },
+      {
+        "description": "Rs. 300 Ticket.",
+        "name": "Special Entry",
+        "wait_time": "3 hours"
+      }
+    ],
+    "smart_routes": [
+      {
+        "description": "Historical steps path. Less crowded than Alipiri.",
+        "duration": "2 hours",
+        "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=13.6833,79.3472&travelmode=walking",
+        "name": "Srivari Mettu (Walk)"
+      }
+    ],
+    "timings": {
+      "General Darshan": "Open 24/7",
+      "Suprabhatam": "3:00 AM - 4:00 AM"
+    }
+  },
+  "varadharaja": {
+    "camera_manager_url": "http://localhost:8054",
+    "coords": [
+      12.8197,
+      79.7246
+    ],
+    "counter_url": "http://localhost:8050/stats",
+    "emergency": [
+      {
+        "name": "Kanipuram Police",
+        "number": "044 2722 2222"
+      }
+    ],
+    "facilities": [
+      "Hall of 100 Pillars",
+      "Water Tank"
+    ],
+    "image": "./images/Varadharaja Permual.png",
+    "location": "Kanchipuram, India",
+    "name": "Varadharaja Perumal",
+    "parking_cameras": {
+      "pond_parking": {
+        "coords": [
+          12.819,
+          79.726
+        ]
+      }
+    },
+    "parking_url": "http://localhost:8052",
+    "routes": [
+      {
+        "description": "Access to the special Golden Lizard shrine.",
+        "name": "Golden Lizard",
+        "wait_time": "40 mins"
+      }
+    ],
+    "smart_routes": [
+      {
+        "description": "Less crowded, direct sanctum access.",
+        "duration": "10 mins",
+        "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=12.8197,79.7246",
+        "name": "East Gate"
+      }
+    ],
+    "timings": {
+      "Darshan": "6:00 AM - 11:00 AM, 4:00 PM - 8:00 PM"
+    }
+  }
+}

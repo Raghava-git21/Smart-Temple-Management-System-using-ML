@@ -1,0 +1,338 @@
+/* =========================================================================
+   Theme & Variables
+========================================================================= */
+:root {
+    /* Color Palette - Premium Dark/Neon Aesthetic */
+    --bg-dark: #0f111a;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    
+    /* Accents */
+    --accent-primary: #6366f1;   /* Indigo */
+    --accent-secondary: #8b5cf6; /* Violet */
+    --accent-tertiary: #ec4899;  /* Pink */
+    
+    /* Glassmorphism settings */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --blur-amt: 16px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.center-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.centered-layout {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow-y: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Clash Display', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================================================
+   Animated Background Shapes
+========================================================================= */
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    opacity: 0.4;
+    animation: float 20s infinite alternate ease-in-out;
+}
+
+.shape-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+    top: -100px;
+    left: -100px;
+}
+
+.shape-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--accent-secondary) 0%, transparent 70%);
+    bottom: -100px;
+    right: -100px;
+    animation-delay: -5s;
+}
+
+.shape-3 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--accent-tertiary) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+    animation-duration: 25s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, -50px) scale(1.1); }
+}
+
+/* =========================================================================
+   Portal Container
+========================================================================= */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--blur-amt));
+    -webkit-backdrop-filter: blur(var(--blur-amt));
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.portal-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    z-index: 10;
+}
+
+.portal-header {
+    margin-bottom: 40px;
+}
+
+.portal-header .logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+.portal-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    background: linear-gradient(to right, #fff, var(--text-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portal-header p {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+/* =========================================================================
+   Buttons
+========================================================================= */
+.button-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.glass-button {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid var(--glass-border);
+    padding: 20px;
+    border-radius: 16px;
+    transition: var(--transition-smooth);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(99, 102, 241, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.btn-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--accent-secondary);
+    margin-right: 20px;
+    flex-shrink: 0;
+    transition: var(--transition-fast);
+}
+
+.glass-button:hover .btn-icon {
+    background: var(--accent-primary);
+    color: #fff;
+}
+
+.btn-text h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.btn-text span {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.external-icon {
+    margin-left: auto;
+    color: var(--text-secondary);
+    font-size: 14px;
+    opacity: 0.3;
+    transition: var(--transition-fast);
+}
+
+.glass-button:hover .external-icon {
+    opacity: 1;
+    color: var(--text-primary);
+    transform: translateX(2px) translateY(-2px);
+}
+
+/* =========================================================================
+   Top Bar & Clock
+========================================================================= */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 40px;
+    background: rgba(15, 17, 26, 0.8);
+    backdrop-filter: blur(var(--blur-amt));
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 1000;
+}
+
+.status-badge {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-pulse {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.clock-display {
+    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--glass-bg);
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+}
+
+.clock-display i {
+    color: var(--accent-primary);
+}
+
+/* =========================================================================
+   Management Section Styles
+========================================================================= */
+.management-section h2 {
+    background: linear-gradient(to right, #fff, var(--accent-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.settings-card {
+    transition: var(--transition-smooth);
+}
+
+.settings-card:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+input[type="text"] {
+    transition: var(--transition-fast);
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: var(--accent-primary) !important;
+    background: rgba(255,255,255,0.05) !important;
+}
+
+.add-btn {
+    transition: var(--transition-fast);
+}
+
+.add-btn:hover {
+    background: rgba(255,255,255,0.1) !important;
+    border-color: var(--accent-secondary) !important;
+    color: var(--accent-secondary) !important;
+}
+
+.portal-container {
+    max-width: 800px; /* Wider for management section */
+}

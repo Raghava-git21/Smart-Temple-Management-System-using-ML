@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Parking | AI Intelligence</title>
+    <link rel="stylesheet" href="style.css?v=1.5">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Leaflet JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+
+<body>
+    <div class="glass-bg"></div>
+
+    <main class="dashboard">
+        <header>
+            <h1 id="temple-parking-title">Temple Parking AI</h1>
+            <div id="status-indicator" class="status-chip">
+                <span class="dot"></span> System Live
+            </div>
+        </header>
+
+        <!-- AI Monitoring Grid -->
+        <section class="video-section">
+            <div class="card glass">
+                <div class="card-header">
+                    <div class="header-flex">
+                        <h2>TEMPLE AI SURVEILLANCE & GEOMETRY</h2>
+                        <div class="chip chip-matrix">LIVE MATRIX</div>
+                    </div>
+                </div>
+                <div class="video-grid" id="main-video-grid">
+                    <!-- Dynamic feeds will be injected here -->
+                    
+                    <!-- Map Feed (Persistent) -->
+                    <div class="feed-item map-feed">
+                        <div class="video-container">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Occupancy Section -->
+        <section class="main-grid">
+            <div class="card stats-card glass">
+                <div class="card-header">
+                    <h2>LIVE OCCUPANCY</h2>
+                </div>
+                <div class="stats-content">
+                    <span id="spots-count" class="big-number">20</span>
+                    <span class="unit">Spots Available</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div id="parking-progress" class="progress-bar" style="width: 100%;"></div>
+                </div>
+                <p id="parking-status-label">Plenty of Space</p>
+                <div class="camera-status-list" id="cameraStatusList">
+                    <!-- Dynamic status list: Synchronized with AI config -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <section id="alert-banner" class="alert-banner success">
+        <div class="alert-content">
+            <span class="alert-icon">✨</span>
+            <h3 id="alert-text">PARKING AVAILABLE</h3>
+        </div>
+    </section>
+
+    <script src="app.js?v=1.5"></script>
+</body>
+
+</html>

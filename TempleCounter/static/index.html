@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple AI Counter | Real-time Occupancy</title>
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Firebase SDK Compat -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+</head>
+
+<body>
+    <div class="glass-bg"></div>
+
+    <main class="dashboard">
+        <header>
+            <h1>Temple AI Counter</h1>
+            <div id="status-indicator" class="status-chip online">
+                <span class="dot"></span> Online
+            </div>
+        </header>
+
+        <section class="video-section">
+            <div class="card video-card glass">
+                <div class="card-header">
+                    <h2>Live Multi-Camera AI Grid</h2>
+                </div>
+                <div class="video-container">
+                    <img src="/video_feed" alt="Live AI Counter Feed">
+                    <div class="hud-overlay">
+                        <div class="hud-corner top-left"></div>
+                        <div class="hud-corner top-right"></div>
+                        <div class="hud-corner bottom-left"></div>
+                        <div class="hud-corner bottom-right"></div>
+                        <div class="hud-scanning"></div>
+                        <div class="hud-status">
+                            <span class="rec-dot"></span> LIVE SUB-GRID • 1080P
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-grid">
+            <div class="card stats-card glass" id="occupancy-card">
+                <div class="card-header">
+                    <h2>Current Occupancy</h2>
+                </div>
+                <div class="stats-content">
+                    <span id="current-count" class="big-number">0</span>
+                    <span class="separator">/</span>
+                    <span id="max-limit" class="medium-number">0</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div id="occupancy-progress" class="progress-bar"></div>
+                </div>
+                <p id="occupancy-label">Comfortable</p>
+            </div>
+
+            <div class="card stats-card glass" id="darshan-time-card">
+                <div class="card-header">
+                    <h2>Est. Darshan Time</h2>
+                </div>
+                <div class="stats-content">
+                    <span id="wait-time" class="big-number">0</span>
+                    <span class="unit">mins</span>
+                </div>
+                <div class="status-indicator">
+                    Crowd Level: <span id="crowd-status" class="status-badge">Free</span>
+                </div>
+            </div>
+
+            <div class="card glass" id="map-card"
+                style="grid-column: span 2; padding: 0; overflow: hidden; height: 350px;">
+                <div id="map" style="width: 100%; height: 100%;"></div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <script src="index.js?v=1.2"></script>
+</body>
+
+</html>
